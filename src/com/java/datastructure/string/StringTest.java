@@ -1,4 +1,4 @@
-package com.java.base.datastructure.string;
+package com.java.datastructure.string;
 
 /**
  * Created by 1 on 2017/4/4.
@@ -10,7 +10,7 @@ package com.java.base.datastructure.string;
 * 'a' = 97
 */
 
-public class StringCompare {
+public class StringTest {
 
     public static int compare(String str1, String str2) {
         char[] char1 = str1.toCharArray();
@@ -32,6 +32,7 @@ public class StringCompare {
     }
 
     public static String replace(String str, String substr, String rep) {
+//        朴素算法，暴力匹配
         int key = findKey(str, substr);
         char[] cstr = str.toCharArray();
         char[] crep = rep.toCharArray();
@@ -41,7 +42,7 @@ public class StringCompare {
         return String.valueOf(cstr);
     }
 
-    public static int findKey(String str, String substr) {
+    private static int findKey(String str, String substr) {
         for (int i = 0; i < str.length(); i++) {
             int k = i;
             int j;
@@ -64,9 +65,9 @@ public class StringCompare {
     }
 
     public static void main(String[] args) {
-        String str1 = "abcabcabc";
-        String str2 = "abcabx";
+        String str1 = "abcdbcabc";
+        String str2 = "abcd";
 
-        System.out.println(StringCompare.findKey(str1,str2));
+        System.out.println(StringTest.replace(str1,"dbc",str2));
     }
 }

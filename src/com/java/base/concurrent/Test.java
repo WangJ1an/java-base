@@ -54,7 +54,7 @@ public class Test {
 
     public void testABQ() throws InterruptedException {
 
-        ArrayBlockingQueue abq = new ArrayBlockingQueue(10);
+        ArrayBlockingQueue abq = new ArrayBlockingQueue(100);
 
         Lock lock = new ReentrantLock();
 
@@ -62,7 +62,7 @@ public class Test {
             @Override
             public void run() {
                 lock.lock();
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 90; i++) {
                     try {
                         abq.put(i);
                     } catch (InterruptedException e) {
@@ -77,7 +77,7 @@ public class Test {
             @Override
             public void run() {
                 lock.lock();
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 100; i++) {
                     if (!abq.isEmpty()) {
                         try {
                             System.out.println(abq.take());

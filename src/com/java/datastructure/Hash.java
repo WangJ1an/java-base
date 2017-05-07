@@ -1,4 +1,4 @@
-package com.java.base.datastructure;
+package com.java.datastructure;
 
 /**
  * Created by pengfei on 2017/3/8.

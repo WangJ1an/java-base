@@ -1,4 +1,4 @@
-package com.java.base.datastructure.rpntest;
+package com.java.datastructure.rpntest;
 
 import java.util.HashMap;
 import java.util.LinkedList;

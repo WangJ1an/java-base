@@ -1,7 +1,5 @@
-package com.java.base.datastructure;
+package com.java.datastructure;
 
-
-import java.util.HashSet;
 
 /**
  * Created by 1 on 2017/3/11.

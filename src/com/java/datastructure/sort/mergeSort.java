@@ -1,4 +1,4 @@
-package com.java.base.sort;
+package com.java.datastructure.sort;
 
 import com.java.base.Person;
 

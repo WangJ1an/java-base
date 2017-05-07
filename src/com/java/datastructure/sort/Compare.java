@@ -1,4 +1,4 @@
-package com.java.base.sort;
+package com.java.datastructure.sort;
 
 /**
  * Created by 1 on 2017/2/24.

@@ -1,4 +1,4 @@
-package com.java.base.sort;
+package com.java.datastructure.sort;
 
 
 import java.util.Arrays;
@@ -40,9 +40,9 @@ public class HeapSort1 {
 
     //创建大根堆
     static void creat(Integer[] datas) {
-        int length = datas.length;
+
         for(int i = datas.length/2 - 1; i >= 0; --i){
-            adjust(datas, i, length);
+            adjust(datas, i, datas.length);
         }
     }
 

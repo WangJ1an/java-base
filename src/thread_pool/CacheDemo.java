@@ -30,9 +30,9 @@ public class CacheDemo {
                         value = "aaaaa"; //实际是去queryDB，查询数据库
                     }
                 } finally {
-                    rwl.writeLock().unlock();
+                    rwl.readLock().lock();
                 }
-                rwl.readLock().lock();
+                rwl.writeLock().unlock();
             }
         } finally {
             rwl.readLock().unlock();

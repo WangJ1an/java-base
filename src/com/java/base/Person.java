@@ -1,6 +1,6 @@
 package com.java.base;
 
-import com.java.base.sort.Compare;
+import com.java.datastructure.sort.Compare;
 
 /**
  * Created by 1 on 2017/2/21.
