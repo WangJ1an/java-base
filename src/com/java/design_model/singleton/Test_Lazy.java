@@ -1,4 +1,4 @@
-package com.java.base.thread;
+package com.java.design_model.singleton;
 
 /**
  * Created by 1 on 2017/4/13.

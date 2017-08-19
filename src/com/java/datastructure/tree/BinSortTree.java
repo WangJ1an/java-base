@@ -142,6 +142,7 @@ public class BinSortTree {
         bst.insert(3);
         bst.insert(8);
         bst.insert(6);
+
         bst.inOrder();
         System.out.println(bst.find(9));
         System.out.println(bst.delete(7));

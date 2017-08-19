@@ -16,7 +16,7 @@ public class ThreadLocalTest {
                 @Override
                 public void run() {
                     int num = new Random().nextInt(30);
-                    System.out.println(Thread.currentThread().getName() + " put num : " + num);
+                    System.out.println(Thread.currentThread().getName() + " add num : " + num);
                     x.set(num);
 //                    ThreadScopeData data = new ThreadScopeData("name"+num,num);
                     ThreadScopeData.getThreadInstance().setName("name"+num);

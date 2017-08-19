@@ -7,9 +7,9 @@ import java.util.concurrent.*;
  * Created by 1 on 2017/3/12.
  */
 public class ExecutorTest {
-    ExecutorService service = Executors.newCachedThreadPool();
-    Vector<Future<String>> res = new Vector<Future<String>>();
-    ExecutorCompletionService ecs = new ExecutorCompletionService(service,new ArrayBlockingQueue<Future>(10));
+    private ExecutorService service = Executors.newCachedThreadPool();
+    private Vector<Future<String>> res = new Vector<Future<String>>();
+    private ExecutorCompletionService<String> ecs = new ExecutorCompletionService<String>(service,new ArrayBlockingQueue<>(10));
 
     class MyCallable implements Callable<String> {
         String result;
@@ -36,7 +36,7 @@ public class ExecutorTest {
         while (true) {
             int doneNum = 0;
             for (int i = 0; i < 20; i++) {
-                Future f = ecs.poll();
+                Future<String> f = ecs.poll();
                 try {
                     System.out.println(f.get());
                 } catch (InterruptedException | ExecutionException e) {

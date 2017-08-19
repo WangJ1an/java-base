@@ -50,8 +50,8 @@ public class HeapSort1 {
     static void sort(Integer[] datas){
         creat(datas);
         for(int i = 0; i<datas.length; ++i){
-            swap(datas, 0, datas.length - 1 - i);
-            adjust(datas, 0, datas.length - 1 - i);
+            swap(datas, 0, datas.length -1 - i);
+            adjust(datas, 0, datas.length -1 - i);
         }
     }
 
